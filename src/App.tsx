@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useEffect, useState } from "react";
+import MainHeader from "./components/header/MainHeader";
+import PopUpModal from "./components/header/PopUpModal";
+import Intro from "./components/intro/Intro";
+import Services from "./components/services/Services";
+import useWindowSize from "./hooks/useWindowSize";
 
 function App() {
+  const { width } = useWindowSize();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const expandMenuHandler = () => {
+    if (typeof width === "number" && width < 640) {
+      setIsExpanded((prevState) => {
+        return (prevState = !prevState);
+      });
+    }
+  };
+
+  useEffect(()=> {
+    if (width && width >= 640) {
+      setIsExpanded(false)
+    }
+  }, [width])
+
+  let mainContent = <Fragment>
+    <MainHeader onExpand={expandMenuHandler}/>
+      <Intro />
+      <Services />
+  </Fragment>
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="mt-10 mx-6 sm:mx-32">
+      { !isExpanded && mainContent }
+      { isExpanded &&  width && width < 640 && <PopUpModal /> }
     </div>
   );
 }

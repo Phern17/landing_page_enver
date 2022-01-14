@@ -60,7 +60,7 @@ const Services = () => {
       const idx = i * 3 + j;
       const currService = serviceList[idx];
       const currRow = (
-        <div key={idx} className="mt-10 mb-11 text-center sm:basis-1/3 sm:max-w-[384px] sm:px-10 ">
+        <div key={idx} className="mt-10 mb-11 text-center sm:basis-1/3  sm:px-10 ">
           <div
             className={`bg-zinc-800  rounded-full w-[69px] h-[69px] bg-no-repeat bg-center mx-auto mb-5`}
             style={{ backgroundImage: `url(${currService.image})` }}
@@ -68,19 +68,19 @@ const Services = () => {
           <h3 className="text-white font-semibold text-3xl mb-5">
             {currService.itemName}
           </h3>
-          <p className="text-gray-400 text-lg leading-7">
+          <p className="mt-8 text-gray-400 font-sans max-w-[270px] sm:max-w-[299px] mx-auto">
             {currService.description}
           </p>
         </div>
       );
       row.push(currRow);
     }
-    const tempElement = <div className="flex flex-col md:flex-row" key={i}>{row}</div>;
+    const tempElement = <div className="flex flex-col sm:flex-row" key={i}>{row}</div>;
     content.push(tempElement);
   }
 
   return (
-    <SectionWrapper title="The Service We Provide For You">
+    <SectionWrapper title="The Service We Provide For You" id="Services">
       {content}
     </SectionWrapper>
   );

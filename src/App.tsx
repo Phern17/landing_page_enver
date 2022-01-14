@@ -1,9 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
+import ContactUs from "./components/contactUs/ContactUs";
 import MainHeader from "./components/header/MainHeader";
 import PopUpModal from "./components/header/PopUpModal";
 import Intro from "./components/intro/Intro";
+import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
+import WhyUs from "./components/why-us/WhyUs";
 import useWindowSize from "./hooks/useWindowSize";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const { width } = useWindowSize();
@@ -26,13 +30,17 @@ function App() {
   let mainContent = <Fragment>
     <MainHeader onExpand={expandMenuHandler}/>
       <Intro />
+      <WhyUs />
       <Services />
+      <Portfolio />
+      <ContactUs />
+      <Footer />
   </Fragment>
 
   return (
-    <div className="mt-10 mx-6 sm:mx-32">
+    <div className="mt-10 mx-6 lg:mx-32">
       { !isExpanded && mainContent }
-      { isExpanded &&  width && width < 640 && <PopUpModal /> }
+      { isExpanded &&  width && width < 640 && <PopUpModal onExpand={expandMenuHandler}/> }
     </div>
   );
 }

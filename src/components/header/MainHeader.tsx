@@ -4,12 +4,9 @@ import logo from "../../images/enver.png";
 import burgerBtn from "../../images/Sort.svg";
 import Button from "../UI/Button";
 import NavLinks from "./NavLinks";
+import { propFunctionInterface } from "../interfaces";
 
-type MainHeaderProp = {
-  onExpand: ()=> void
-}
-
-const MainHeader = (props: MainHeaderProp) => {
+const MainHeader = (props: propFunctionInterface) => {
   const { width } = useWindowSize();
   
   let navItems = (

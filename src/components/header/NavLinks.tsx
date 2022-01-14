@@ -1,4 +1,5 @@
 import React from "react";
+import { propFunctionInterface } from "../interfaces";
 
 const links = [
   { href: "#Home", title: "Home" },
@@ -7,9 +8,13 @@ const links = [
   { href: "#AboutUs", title: "About Us" },
 ];
 
-const NavLinks = () => {
-  return (
-    <div className="text-white">
+interface navlinkType extends propFunctionInterface {
+  className?: string
+}
+
+const NavLinks = (props: navlinkType) => {
+    return (
+    <div onClick={props.onExpand} className={`text-white flex flex-col sm:flex-row ${props.className ? props.className : "hello"}`}>
       {links.map((link, idx) => (
         <a
           href={link.href}

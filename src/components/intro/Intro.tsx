@@ -15,7 +15,7 @@ const Intro = () => {
         </p>
         <button className="text-white px-5 py-[0.7rem] mt-12 bg-blue-700 flex">Our Services <img src={pointer} alt="our services pointer" className="shrink"/></button>
       </div>
-      <div className="mt-12 min-h-max relative border-2 border-yellow-50 sm:basis-1/2 sm:mt-0">
+      <div className="mt-12 min-h-max relative sm:basis-1/2 sm:mt-0">
         <img src={heroBanner} alt="page banner" />
       </div>
     </div>

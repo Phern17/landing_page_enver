@@ -17,14 +17,14 @@ const MainHeader = (props: propFunctionInterface) => {
     navItems = (
       <React.Fragment>
         <NavLinks />
-        <Button text="Contact Us" />
+        <Button text="Contact Us" className=" hover:text-orange-300 hover:border-orange-300 active:bg-zinc-600"/>
       </React.Fragment>
     );
   }
 
   return (
     <React.Fragment>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center z-10 relative">
         <div className="shrink-0 flex items-center">
           <img className="h-7 w-7" src={logo} alt="Enver Logo" />
           <p className="text-3xl text-white ml-1 font-mons">Enver</p>

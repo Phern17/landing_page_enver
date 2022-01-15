@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import portfolio_1 from "../../images/portfolio_1.png";
-import portfolio_2 from "../../images/portfolio_2.jpg";
-import portfolio_3 from "../../images/portfolio_3.jpg";
 
-const imageArr: string[] = [portfolio_1, portfolio_2, portfolio_3];
+type carouselType = {
+  imageArr: string[]
+}
 
-const Carousel = () => {
+const Carousel = (props: carouselType) => {
   const [currImage, setCurrImage] = useState(0);
 
-  const refs = imageArr.map((image) => React.createRef<HTMLDivElement>());
+  const refs = props.imageArr.map((image) => React.createRef<HTMLDivElement>());
 
   const scrollToImage = (i: number) => {
     setCurrImage(i);
@@ -22,7 +21,7 @@ const Carousel = () => {
     });
   };
 
-  const totalImages = imageArr.length;
+  const totalImages = props.imageArr.length;
 
   const nextImage = () => {
     if (currImage >= totalImages - 1) scrollToImage(0);
@@ -37,7 +36,7 @@ const Carousel = () => {
   return (
     <React.Fragment>
       <div className="flex overflow-hidden mt-16">
-        {imageArr.map((img, i) => (
+        {props.imageArr.map((img, i) => (
           <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
             <img
               src={img}
@@ -51,13 +50,13 @@ const Carousel = () => {
       <div className="mt-12 text-center">
         <button
           onClick={prevImage}
-          className="rounded-full bg-gray-600 text-white w-[38px] h-[38px] m-2 hover:bg-blue-600"
+          className="rounded-full bg-gray-600 text-white w-[38px] h-[38px] m-2 hover:bg-blue-600 active:bg-blue-900"
         >
           <i className="fas fa-chevron-left"></i>
         </button>
         <button
           onClick={nextImage}
-          className="rounded-full bg-gray-600 text-white w-[38px] h-[38px] m-2 hover:bg-blue-600"
+          className="rounded-full bg-gray-600 text-white w-[38px] h-[38px] m-2 hover:bg-blue-600 active:bg-blue-900"
         >
           <i className="fas fa-chevron-right"></i>
         </button>

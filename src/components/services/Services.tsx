@@ -62,7 +62,7 @@ const Services = () => {
       const currRow = (
         <div key={idx} className="mt-10 mb-11 text-center sm:basis-1/3  sm:px-10 ">
           <div
-            className={`bg-zinc-800  rounded-full w-[69px] h-[69px] bg-no-repeat bg-center mx-auto mb-5`}
+            className={`bg-zinc-800  rounded-full w-[69px] h-[69px] bg-no-repeat bg-center mx-auto mb-5 hover:bg-zinc-600`}
             style={{ backgroundImage: `url(${currService.image})` }}
           ></div>
           <h3 className="text-white font-semibold text-3xl mb-5">

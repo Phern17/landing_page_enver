@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/landing_page_enver/static/css/main.0047d6d9.css",
+    "main.js": "/landing_page_enver/static/js/main.16207bfe.js",
+    "static/media/ExcitedGuyBig.png": "/landing_page_enver/static/media/ExcitedGuyBig.78a6239ce9444b547e4e.png",
+    "static/media/portfolio_1.png": "/landing_page_enver/static/media/portfolio_1.fc1ed35bae292b65d075.png",
+    "static/media/BG_Big.jpg": "/landing_page_enver/static/media/BG_Big.6a46b7561b9d13488205.jpg",
+    "static/media/portfolio_3.jpg": "/landing_page_enver/static/media/portfolio_3.4a998e7f1e54d7fee2b9.jpg",
+    "static/media/portfolio_2.jpg": "/landing_page_enver/static/media/portfolio_2.abb4bbb5b1592a26d276.jpg",
+    "static/media/ExcitedGuy.png": "/landing_page_enver/static/media/ExcitedGuy.9e4aa2270645a4442ae5.png",
+    "static/media/BG.jpg": "/landing_page_enver/static/media/BG.fbe41499c60cd8b45ac8.jpg",
+    "static/media/video-play.svg": "/landing_page_enver/static/media/video-play.60cf1f7daaf3b6c480199cf07d353e46.svg",
+    "static/media/align-vertically.svg": "/landing_page_enver/static/media/align-vertically.b3622fd2e0c84d0529967c6a3cdadf16.svg",
+    "index.html": "/landing_page_enver/index.html",
+    "static/media/camera.svg": "/landing_page_enver/static/media/camera.2a665099323f3dacc60f565c763ab9ca.svg",
+    "static/media/code.svg": "/landing_page_enver/static/media/code.f5ab66d68a6e536e05fffa16696c6164.svg",
+    "static/media/code_yellow.svg": "/landing_page_enver/static/media/code_yellow.953da72631502446e98964d69c3d9d34.svg",
+    "static/media/layers.svg": "/landing_page_enver/static/media/layers.cd3c51c618e6a436149e83a0c7db28dc.svg",
+    "static/media/arrow-right-up.svg": "/landing_page_enver/static/media/arrow-right-up.0102d96c1dbd4bae923f7c1156271ea5.svg",
+    "static/media/Sort.svg": "/landing_page_enver/static/media/Sort.bc2576383ea277d53b219518eccf66b9.svg",
+    "main.0047d6d9.css.map": "/landing_page_enver/static/css/main.0047d6d9.css.map",
+    "main.16207bfe.js.map": "/landing_page_enver/static/js/main.16207bfe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0047d6d9.css",
+    "static/js/main.16207bfe.js"
+  ]
+}

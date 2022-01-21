@@ -4,7 +4,6 @@ import SectionTitle from '../UI/SectionTitle'
 const ContactUs = () => {
     return (
         <div className='mt-28 my-20 sm:flex sm:justify-between '>
-            
                 <SectionTitle className=' sm:max-w-lg'> 
                     Contact Us For The Service You Want To Use
                 </SectionTitle>

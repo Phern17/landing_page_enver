@@ -8,10 +8,12 @@ import Services from "./components/services/Services";
 import WhyUs from "./components/why-us/WhyUs";
 import useWindowSize from "./hooks/useWindowSize";
 import Footer from "./components/footer/Footer";
+import "./App.css";
 
 function App() {
   const { width } = useWindowSize();
   const [isExpanded, setIsExpanded] = useState(false);
+  console.log(`From app: ${width}`);
 
   const expandMenuHandler = () => {
     if (typeof width === "number" && width < 640) {
@@ -21,27 +23,33 @@ function App() {
     }
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     if (width && width >= 640) {
-      setIsExpanded(false)
+      setIsExpanded(false);
     }
-  }, [width])
+  }, [width]);
 
-  let mainContent = <Fragment>
-    <MainHeader onExpand={expandMenuHandler}/>
+  let mainContent = (
+    <Fragment>
       <Intro />
       <WhyUs />
       <Services />
       <Portfolio />
       <ContactUs />
       <Footer />
-  </Fragment>
+    </Fragment>
+  );
 
   return (
-    <div className="mt-10 mx-6 lg:mx-32">
-      { !isExpanded && mainContent }
-      { isExpanded &&  width && width < 640 && <PopUpModal onExpand={expandMenuHandler}/> }
-    </div>
+    <Fragment>
+      { !isExpanded && <MainHeader onExpand={expandMenuHandler} /> }
+      <div className="mx-6 mt-24 sm:mx-32">
+        {!isExpanded && mainContent}
+        {isExpanded && width && width < 640 && (
+          <PopUpModal onExpand={expandMenuHandler} />
+        )}
+      </div>
+    </Fragment>
   );
 }
 

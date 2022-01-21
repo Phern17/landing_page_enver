@@ -10,6 +10,7 @@ const MainHeader = (props: propFunctionInterface) => {
   const { width } = useWindowSize();
   
   let navItems = (
+    
     <img src={burgerBtn} alt="Expand Menu Button" onClick={props.onExpand} />
   );
 
@@ -24,7 +25,7 @@ const MainHeader = (props: propFunctionInterface) => {
 
   return (
     <React.Fragment>
-      <div className="flex justify-between items-center z-10 relative">
+      <div className="flex justify-between items-center fixed z-100 w-full top-0 px-6 py-2 sm:px-32 z-50 bg-zinc-500">
         <div className="shrink-0 flex items-center">
           <img className="h-7 w-7" src={logo} alt="Enver Logo" />
           <p className="text-3xl text-white ml-1 font-mons">Enver</p>

@@ -18,17 +18,17 @@ const Portfolio = () => {
           key={image}
           src={image}
           alt={`gallery item ${idx}`}
-          className="max-w-[336px] max-h-[253px] rounded-2xl relative"
+          className="max-w-[336px] max-h-[253px] rounded-2xl relative overflow-hidden"
           style={{ top: `${idx * 30}px` }}
         />
       ))}
     </div>
   );
+  console.log(width)
 
   return (
-    <SectionWrapper title="Our Awesome Portfolio" id="OurProjects">
-      {width && width >= 640 && gallery}
-      {width && width < 640 && <Carousel imageArr={imageArr} />}
+    <SectionWrapper title="Our Awesome Portfolio" id="OurProjects" centerTitle={true}>
+      {width && width >= 640 ? gallery : <Carousel imageArr={imageArr} />}
     </SectionWrapper>
   );
 };

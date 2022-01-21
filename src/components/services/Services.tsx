@@ -6,6 +6,8 @@ import layers from "../../images/layers.svg"
 import video_play from "../../images/video-play.svg"
 import camera from "../../images/camera.svg"
 import align from "../../images/align-vertically.svg"
+import { ReactComponent as DoubleTriangle } from '../../images/doubleTriangle.svg'
+import {ReactComponent as Add} from '../../images/add.svg'
 
 type serviceObj = {
   itemName: string;
@@ -80,7 +82,9 @@ const Services = () => {
   }
 
   return (
-    <SectionWrapper title="The Service We Provide For You" id="Services">
+    <SectionWrapper title="The Service We Provide For You" id="Services" className="relative" centerTitle={true}>
+      <DoubleTriangle className="absolute top-40 sm:top-10" />
+      <Add className="absolute right-0"/>
       {content}
     </SectionWrapper>
   );

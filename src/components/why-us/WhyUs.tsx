@@ -8,12 +8,12 @@ const WhyUs = () => {
     const { width } = useWindowSize();
 
   return (
-    <SectionWrapper title="Why Enver Is The Best Choice?" id="AboutUs">
+    <SectionWrapper title="Why Enver Is The Best Choice?" id="AboutUs" className="sm:flex-wrap sm:flex-row sm:justify-between sm:align-middle">
       <p className="mt-8 text-gray-400 font-sans">
         Watch this one minute video so you understand why you should use our
         services!
       </p>
-      <img src={width && width >= 640? Big_BG : BG} alt="Enver Introduction video" className="mt-12"/>
+      <img src={width && width >= 640? Big_BG : BG} alt="Enver Introduction video" className="mt-12 flex-shrink-0"/>
     </SectionWrapper>
   );
 };

@@ -1,0 +1,15 @@
+.intro {
+    position: absolute;
+    left: -135px;
+    top: -168px;
+  
+    background: linear-gradient(
+      180deg,
+      rgba(84, 84, 212, 0.27) 0%,
+      rgba(84, 84, 212, 0.1134) 100%
+    );
+    
+    filter: blur(80px);
+    border-radius: 233.5px;
+    transform: rotate(-54.37deg);
+  }

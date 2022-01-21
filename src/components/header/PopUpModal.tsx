@@ -14,7 +14,7 @@ const PopUpModal = (props: propFunctionInterface) => {
   const modal = (
     <div className="flex flex-col fixed top-0 left-0 right-0 h-full text-2xl">
       <div className="m-auto">
-      <Button text="X" className="absolute top-8 right-4 border-0" onClick={props.onExpand}/>
+      <Button text="X" className="absolute top-2 right-4 border-none" onClick={props.onExpand}/>
         <NavLinks
           onExpand={props.onExpand}
           className="text-center space-y-6"

@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth !important;
+  scroll-padding-top: 12vh;
 }
 
 body {
